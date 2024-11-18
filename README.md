@@ -1,8 +1,3 @@
-!DOCTYPE html
+Hello
 
-<html>
-
-  
-
-  
-</html>
+Test
