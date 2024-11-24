@@ -19,12 +19,14 @@
   padding: 0;
   overflow: hidden;
   border: 1px solid #ffffff;
-  background-color: #f3f3f3;
+  background-color: #c9bdbd;
+  height: 45px;
 }
 
 #MenuBar_Item a {
   display: block;
-  color: #666;
+  font-size:20px;
+  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -34,18 +36,17 @@
 }
 
 #MenuBar_Item_S {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Lucida Console", "Courier New", monospace;
+  background: url(Images/MainICON.png);
+  width: 45px; 
+  height: 30px; 
+  border: 1px solid #000000;
   float: right;
+  margin: 10px;
+
 }
 
 #MenuBar_Item a:hover:not(.active) {
-  background-color: #ccc4c4;
+  background-color: #726c6c;
 }
 
 #MenuBar_Item a.active {
