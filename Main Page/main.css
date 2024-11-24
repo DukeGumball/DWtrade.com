@@ -34,15 +34,10 @@
   font-family: "Lucida Console", "Courier New", monospace;
   float: left;
 }
-
-#MenuBar_Item_S {
-  background: url(Images/MainICON.png);
-  width: 45px; 
-  height: 30px; 
-  border: 1px solid #000000;
+#MenuBar_Item_S a{
+  display: block;
+  color: #000000;
   float: right;
-  margin: 10px;
-
 }
 
 #MenuBar_Item a:hover:not(.active) {
