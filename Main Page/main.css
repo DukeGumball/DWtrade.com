@@ -48,3 +48,9 @@
   color: white;
   background-color: #030203;
 }
+
+#CurrentBackground {
+
+  background-image: url(Images);
+
+}
