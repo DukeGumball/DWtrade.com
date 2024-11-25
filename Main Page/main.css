@@ -50,7 +50,18 @@
 }
 
 #CurrentBackground {
+  background-image: url(Images/Runic_Island.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; 
+}
 
-  background-image: url(Images);
+#TradeBox {
+  border: 5px solid rgb(0, 0, 0);
+  background-color: #ffffff;
+  padding: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
