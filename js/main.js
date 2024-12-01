@@ -19,12 +19,6 @@ window.onload = function() {
     
     }
 
-    addDoodle.onclick = function() {
-
-        
-
-    }
-
 }     
 
 
