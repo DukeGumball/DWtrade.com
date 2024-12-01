@@ -52,6 +52,9 @@
 }
 
 #MessageBoard {
+
+  display: none;
+
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
 
