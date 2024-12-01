@@ -1,8 +1,13 @@
 // Settings //
 
-window.onload = function() {
+enableAnnouncement = false
 
-    enableAnnouncement = false
+
+// Vars //
+
+const addDoodle = document.getElementById("")
+
+window.onload = function() {
 
     if (enableAnnouncement == true) {
     
@@ -10,7 +15,6 @@ window.onload = function() {
     
         announcementBar.display = "Block"
         
-    
     
     }
 }     

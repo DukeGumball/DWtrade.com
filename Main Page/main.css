@@ -1,21 +1,4 @@
-/* Test */
-
-#PG {
-  text-align: center;
-  text-transform: uppercase;
-  color: #4CAF50;
-  font-family: "Lucida Console", "Courier New", monospace;
-}
-
-#MenuBar {
-  list-style-type: none;
-  margin: -10px;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #ffffff;
-  background-color: #c9bdbd;
-  height: 45px;
-}
+/* Menu Bar */
 
 #MenuBar_Item a {
   display: block;
@@ -28,10 +11,21 @@
   font-family: "Lucida Console", "Courier New", monospace;
   float: left;
 }
+
 #MenuBar_Item_S a{
   display: block;
   color: #000000;
   float: right;
+}
+
+#MenuBar {
+  list-style-type: none;
+  margin: -10px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  background-color: #c9bdbd;
+  height: 45px;
 }
 
 #MenuBar_Item a:hover:not(.active) {
@@ -42,6 +36,8 @@
   color: white;
   background-color: #030203;
 }
+
+/* Background */
 
 #CurrentBackground {
   background-image: url(Images/Runic_Island.jpg);
