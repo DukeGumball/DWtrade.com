@@ -1,8 +1,8 @@
 // Settings //
 
 window.onload = function() {
-    
-    enableAnnouncement = true
+
+    enableAnnouncement = false
 
     if (enableAnnouncement == true) {
     
