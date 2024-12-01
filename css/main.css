@@ -44,7 +44,7 @@
 }
 
 #CurrentBackground {
-  background-image: url(Images/Runic_Island.jpg);
+  background-image: url(../Images/Runic_Island.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
