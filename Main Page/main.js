@@ -1,7 +1,7 @@
 // Settings //
 
-enableAnnouncement = false
-
+enableAnnouncement = true
+announcementTxt = "Welcome!!"
 
 // Vars //
 
@@ -14,6 +14,7 @@ window.onload = function() {
         const announcementBar = document.getElementById("MessageBoard");
     
         announcementBar.display = "Block"
+        announcementBar.textContent = "WELCOME!!!!"
         
     
     }
