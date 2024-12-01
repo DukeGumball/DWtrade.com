@@ -66,6 +66,8 @@
         
 }
 
+/* Trade Box */
+
 #BoxTitle {
 
   font-weight: bold;
@@ -89,17 +91,6 @@
   text-anchor: middle;
 }
 
-#AddTrade {
-  font-weight: bold;
-  font-family: "Lucida Console", "Courier New", monospace;
-  text-align: center;
-  padding: 10px;
-
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  float: right;
-}
-
 #DoodleContent {
 
   list-style-type: none;
@@ -119,7 +110,6 @@
 #DoodleImage {
   height: 100%;  
   width: 100%;
-
 }
 
 #ContentItem {
@@ -136,5 +126,15 @@
 
   overflow: hidden;
 
+}
 
+#AddTrade {
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  padding: 10px;
+
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  float: right;
 }

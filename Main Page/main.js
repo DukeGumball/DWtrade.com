@@ -5,7 +5,7 @@ announcementTxt = "Welcome!!"
 
 // Vars //
 
-const addDoodle = document.getElementById("")
+const addDoodle = document.getElementById("AddTrade")
 
 window.onload = function() {
 
@@ -18,6 +18,13 @@ window.onload = function() {
         
     
     }
+
+    addDoodle.onclick = function() {
+
+        
+
+    }
+
 }     
 
 
