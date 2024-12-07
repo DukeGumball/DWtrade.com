@@ -1,6 +1,7 @@
 // Settings //
 
 enableAnnouncement = false
+enableAnnouncement = false
 announcementTxt = "Welcome!!"
 
 // Vars //
@@ -15,6 +16,7 @@ addDoodle.onclick = function() {
 }
 
 window.onload = function() {
+  
   
     if (enableAnnouncement == true) {
       
