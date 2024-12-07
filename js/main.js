@@ -1,7 +1,6 @@
 // Settings //
 
-enableAnnouncement = false
-enableAnnouncement = false
+enableAnnouncement = true
 announcementTxt = "Welcome!!"
 
 // Vars //
