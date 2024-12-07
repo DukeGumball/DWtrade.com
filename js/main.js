@@ -12,12 +12,6 @@ const createUI = document.getElementById("DoodleCreate");
 console.log(announcementBar)
 console.log(addDoodle)
 
-addDoodle.onclick = function() {
-  
-  createUI.style.display = "Block"
-  
-}
-
 window.onload = function() {
   
   
@@ -29,6 +23,12 @@ window.onload = function() {
         
     
     }
+
+    addDoodle.onclick = function() {
+  
+        createUI.style.display = "Block"
+        
+      }
 
 }     
 
