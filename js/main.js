@@ -9,15 +9,12 @@ const addDoodle = document.getElementById("AddTrade");
 const announcementBar = document.getElementById("MessageBoard");
 const createUI = document.getElementById("DoodleCreate");
 
-console.log(announcementBar)
-console.log(addDoodle)
-
 window.onload = function() {
   
   
     if (enableAnnouncement == true) {
       
-        announcementBar.style.display = "Block"
+      announcementBar.style.display = "Block"
        
       announcementBar.innerHTML = "WELCOME!!!!"
         

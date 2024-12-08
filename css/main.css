@@ -188,6 +188,15 @@
 
 }
 
+#CreateTitle {
+
+  text-align: center;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: rgb(255,255,255);
+
+}
+
 #DoodleIcon {
 
   display: inherit;
