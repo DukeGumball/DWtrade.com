@@ -9,6 +9,9 @@ const addDoodle = document.getElementById("AddTrade");
 const announcementBar = document.getElementById("MessageBoard");
 const createUI = document.getElementById("DoodleCreate");
 
+console.log(announcementBar)
+console.log(addDoodle)
+
 window.onload = function() {
   
   

@@ -81,7 +81,9 @@
 
 }
 
-#Tradebox {
+#TradeBox {
+
+  display: block;
 
   width: 80%;
   height: 500px;
