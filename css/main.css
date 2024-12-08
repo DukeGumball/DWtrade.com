@@ -152,11 +152,11 @@
 
 #DoodleCreate {
 
-  display: none;
+  display: block;
 
   z-index: 5;
 
-  width: 90%;
+  width: 70%;
   height: 450px;
   background: rgba(41, 59, 139, 0.7);
   border: 5px solid rgb(36, 83, 128);
@@ -192,10 +192,16 @@
 
 #CreateTitle {
 
+  font-size: 30px;
   text-align: center;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
-  color: rgb(255,255,255);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -203,13 +209,13 @@
 
   display: inherit;
   z-index: 6;
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   background: rgba(117, 118, 124, 0.7);
-  border: 5px solid rgb(255, 255, 255);
+  border: 2.5px solid rgb(255, 255, 255);
   position: absolute;
   margin: inherit;
-  top: inherit;
+  top: -50px;
   left: inherit;
   bottom: inherit;
   right: inherit;
