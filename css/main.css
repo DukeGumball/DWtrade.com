@@ -152,7 +152,7 @@
 
 #DoodleCreate {
 
-  display: block;
+  display: block; /* Change */
 
   z-index: 5;
 
