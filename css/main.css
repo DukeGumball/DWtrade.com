@@ -152,9 +152,7 @@
 
 #DoodleCreate {
 
-  display: block; /* Change */
-
-  z-index: 5;
+  display: none; /* Change */
 
   width: 70%;
   height: 450px;
@@ -171,7 +169,8 @@
 
 }
 
-#DoodleCreate_Menu {
+/* #DoodleCreate_Menu {
+  z-index: 6;
 
   display: inherit;
   z-index: 5;
@@ -188,10 +187,10 @@
   bottom: inherit;
   right: inherit;
 
-}
+} */
 
 #CreateTitle {
-
+  z-index: 6;
   font-size: 30px;
   text-align: center;
   font-weight: bold;
@@ -205,31 +204,68 @@
 
 }
 
+#CreateTitle_Doodles {
+
+  display: inherit;
+  z-index: 6;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  -webkit-text-stroke:1px rgb(255, 255, 255);
+  -webkit-text-fill-color:rgb(0, 0, 0);
+
+}
+
 #DoodleIcon {
 
   display: inherit;
   z-index: 6;
-  height: 200px;
-  width: 200px;
+  width: 20vw;
   background: rgba(117, 118, 124, 0.7);
   border: 2.5px solid rgb(255, 255, 255);
-  position: absolute;
-  margin: inherit;
-  top: -50px;
-  left: inherit;
-  bottom: inherit;
-  right: inherit;
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  max-width: 200px;
+
 }
 
 #DoodleSelection {
-
-  display: inherit;
   z-index: 6;
-  height: 350px;
-  width: 150px;
+
+  position: inherit;
+  display: inherit;
+  height: 80%;
+  width: 30%;
   background: rgba(117, 118, 124, 0.7);
   border: 2.5px solid rgb(255, 255, 255);
-  left: 10px;
-  margin-right: auto;
+  max-width: 500px;
+
+}
+
+#DoodleSelection_List {
+
+  list-style-type: none;
+  z-index: 6;
+  padding: 5px;
+  position: inherit;
+  display: inherit;
+  height: 80%;
+  width: 30%;
+  max-width: scroll;
+	width: auto;
+}
+
+#Doodle_ListItem {
+
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  background-color: #c9bdbd;
 
 }
