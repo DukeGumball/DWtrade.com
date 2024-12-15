@@ -25,6 +25,10 @@ async function countItemsInFolder() {
     // Count the number of items in the folder (this includes files and subfolders)
     const numberOfItems = data.length;
 
+    for (let x = 1; i < numberOfItems; x++)
+        console.log(data)
+      
+
     console.log(`Number of items in the folder "${folderPath}": ${numberOfItems}`);
   } catch (error) {
     console.error('Error:', error);
@@ -38,7 +42,10 @@ window.onload = function() {
     const announcementBar = document.getElementById("MessageBoard");
     const createUI = document.getElementById("DoodleCreate");
 
+    DoodleItems = countItemsInFolder()
+
     
+
     if (enableAnnouncement == true) {
       
       announcementBar.style.display = "Block"
