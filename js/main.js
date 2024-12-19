@@ -26,6 +26,7 @@ async function countItemsInFolder() {
     const numberOfItems = data.length;
 
     for (let x = 1; x < numberOfItems; x++)
+        
         console.log(data)
       
 
