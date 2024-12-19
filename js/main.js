@@ -11,7 +11,9 @@ const folderPath = "Doodles";
 
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${folderPath}`;
 
-async function countItemsInFolder() {
+const doodleList = document.getElementById("DoodleSelection_List");
+
+async function displayItems() {
   try {
     const response = await fetch(apiUrl);
     
@@ -26,8 +28,13 @@ async function countItemsInFolder() {
     const numberOfItems = data.length;
 
     for (let x = 1; x < numberOfItems; x++)
-        
-        console.log(data)
+
+
+        newDoodle = document.createElement("li");
+        newDoodle.id = "Doodle_ListItem"
+        newDoodle.appendChild(doodleList);
+
+        console.log(data[x])
       
 
     console.log(`Number of items in the folder "${folderPath}": ${numberOfItems}`);
@@ -43,8 +50,6 @@ window.onload = function() {
     const announcementBar = document.getElementById("MessageBoard");
     const createUI = document.getElementById("DoodleCreate");
 
-    DoodleItems = countItemsInFolder()
-
     if (enableAnnouncement == true) {
       
       announcementBar.style.display = "Block"
@@ -57,6 +62,8 @@ window.onload = function() {
     addDoodle.onclick = function() {
   
         createUI.style.display = "Block"
+
+        displayItems()
         
     }
 
