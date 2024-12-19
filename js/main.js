@@ -11,7 +11,7 @@ const folderPath = "Doodles";
 
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${folderPath}`;
 
-const doodleList = document.getElementById("DoodleSelection_List");
+doodleList = document.getElementById("DoodleSelection_List");
 
 async function displayItems() {
   try {
@@ -32,7 +32,7 @@ async function displayItems() {
 
         newDoodle = document.createElement("li");
         newDoodle.id = "Doodle_ListItem"
-        newDoodle.appendChild(doodleList);
+        doodleList.appendChild(newDoodle);
 
         console.log(data[x])
       
