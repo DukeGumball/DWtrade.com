@@ -7,7 +7,7 @@ announcementTxt = "Welcome!!"
 
 const owner = "DukeGumball";
 const repo = "DWtrade.com"; 
-const folderPath = ".../Doodles";
+const folderPath = "Doodles";
 
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${folderPath}`;
 
