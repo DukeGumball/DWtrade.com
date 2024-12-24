@@ -33,6 +33,8 @@ window.onload = function () {
 
       doodleList.innerHTML = ''
 
+      console.log(data)
+
       for (let x = 1; x < numberOfItems; x++)
 
         newDoodle = document.createElement("li");
