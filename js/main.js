@@ -40,7 +40,7 @@ window.onload = function () {
         newDoodle = document.createElement("li");
         newDoodle.id = "Doodle_ListItem"
         doodleList.appendChild(newDoodle);
-
+        console.log(x)
         console.log(data[x])
 
 
