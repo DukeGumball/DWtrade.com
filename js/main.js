@@ -35,14 +35,17 @@ window.onload = function () {
 
       console.log(data)
 
-      for (let x = 1; x < numberOfItems; x++)
+      for (let x = 1; x < numberOfItems; x++) {
+
+        console.log(data[x])
 
         newDoodle = document.createElement("li");
         newDoodle.id = "Doodle_ListItem"
-        doodleList.appendChild(newDoodle);
-        console.log(x)
-        console.log(data[x])
+        doodleList.appendChild(newDoodle)
+        doodleImage = document.createElement("img")
+        newDoodle.appendChild(doodleImage)
 
+      }
 
       console.log(`Number of items in the folder "${folderPath}": ${numberOfItems}`);
 
