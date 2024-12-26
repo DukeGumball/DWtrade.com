@@ -52,6 +52,7 @@ window.onload = function () {
       
         newDoodle.appendChild(doodleImage);
 
+        
       }
 
       console.log(`Number of items in the folder "${folderPath}": ${numberOfItems}`);
