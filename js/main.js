@@ -35,7 +35,7 @@ window.onload = function () {
 
       console.log(data)
 
-      for (let x = 1; x < numberOfItems; x++) {
+      for (let x = 0; x < numberOfItems; x++) {
 
         console.log(data[x])
 
@@ -43,7 +43,14 @@ window.onload = function () {
         newDoodle.id = "Doodle_ListItem"
         doodleList.appendChild(newDoodle)
         doodleImage = document.createElement("img")
-        newDoodle.appendChild(doodleImage)
+        doodleImage.style.src = data[x].download_url
+
+        doodleImage.onerror = function() {
+          console.error('Error loading image:', doodleImage.src);
+          doodleImage.alt = 'Image not available';
+        };
+      
+        newDoodle.appendChild(doodleImage);
 
       }
 
