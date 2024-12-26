@@ -37,26 +37,32 @@ window.onload = function () {
 
       for (let x = 0; x < numberOfItems; x++) {
 
-        console.log(data[x])
-
-        newDoodle = document.createElement("li");
-        newDoodle.id = "Doodle_ListItem"
-        doodleList.appendChild(newDoodle)
-        doodleImage = document.createElement("img")
-        doodleImage.src = data[x].download_url
-
-        
+        console.log(data[x]);
+    
+        const newDoodle = document.createElement("li");
+        newDoodle.id = "Doodle_ListItem";
+        doodleList.appendChild(newDoodle);
+        const doodleImage = document.createElement("img");
+    
+        // Check if the download_url is valid
+        if (data[x].download_url) {
+            doodleImage.src = data[x].download_url;
+        } else {
+            doodleImage.src = data[x].path;
+        }
+    
         doodleImage.onerror = function() {
-          console.error('Error loading image:', doodleImage.src);
-          doodleImage.src = 'path/to/fallback/image.png'; 
-          doodleImage.alt = 'Image not available';
+            console.error('Error loading image:', doodleImage.src);
+            doodleImage.src = 'path/to/fallback/image.png';
+            doodleImage.alt = 'Image not available';
         };
-      
+    
         newDoodle.appendChild(doodleImage);
-
-        
-        
-      }
+    
+        // Log the path of the current item
+        console.log(`Path of item ${x}: ${data[x].path}`);
+    }
+    
 
       console.log(`Number of items in the folder "${folderPath}": ${numberOfItems}`);
 
