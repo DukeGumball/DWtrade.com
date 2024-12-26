@@ -43,7 +43,7 @@ window.onload = function () {
         newDoodle.id = "Doodle_ListItem"
         doodleList.appendChild(newDoodle)
         doodleImage = document.createElement("img")
-        doodleImage.style.src = data[x].download_url
+        doodleImage.src = data[x].download_url
 
         doodleImage.onerror = function() {
           console.error('Error loading image:', doodleImage.src);
