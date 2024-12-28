@@ -18,53 +18,44 @@ window.onload = function () {
   const createUI = document.getElementById("DoodleCreate");
   const doodleList = document.getElementById("DoodleSelection_List");
 
-
   async function displayItems() {
+  
     try {
       const response = await fetch(doodleURL);
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch folder contents');
-      }
-
       const data = await response.json();
+  
+      if (Array.isArray(data)) {
+        const doodleList = document.getElementById('DoodleSelection_List');
 
-      const numberOfItems = data.length;
-
-      doodleList.innerHTML = ''
-
-      console.log(data)
-
-      for (let x = 0; x < numberOfItems; x++) {
-
-        console.log(data[x])
-
-        newDoodle = document.createElement("li");
-        newDoodle.id = "Doodle_ListItem"
-        doodleList.appendChild(newDoodle)
-        doodleImage = document.createElement("img")
-        doodleImage.src = data[x].download_url
-
-        console.log(data[x].download_url)
-
-        // doodleImage.onerror = function() {
-        //   console.error('Error loading image:', doodleImage.src);
-        //   doodleImage.alt = 'Image not available';
-        // };
-      
-        newDoodle.appendChild(doodleImage);
-    
-        // Log the path of the current item
-        console.log(`Path of item ${x}: ${data[x].path}`);
-    }
-    
-
-      console.log(`Number of items in the folder "${folderPath}": ${numberOfItems}`);
-
+        data.forEach((item, index) => {
+          if (item.type === 'file' && item.download_url) {
+            const newDoodle = document.createElement("li");
+            newDoodle.id = "Doodle_ListItem"
+            doodleList.appendChild(newDoodle);
+  
+            const doodleImage = document.createElement("img");
+            doodleImage.src = item.download_url;
+  
+            doodleImage.onerror = function() {
+              console.error('Error loading image:', doodleImage.src);
+              doodleImage.alt = 'Image not available';
+            };
+  
+            newDoodle.appendChild(doodleImage);
+  
+            console.log(`Path of item ${index}: ${item.path}`);
+          }
+        });
+  
+        console.log(`Number of items in the folder: ${data.length}`);
+      } else {
+        console.error('Error: Unexpected response format');
+      }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error fetching images from repo:', error);
     }
   }
+  
 
   if (enableAnnouncement == true) {
 
