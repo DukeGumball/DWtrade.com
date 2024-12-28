@@ -45,11 +45,7 @@ window.onload = function () {
         doodleImage = document.createElement("img")
         doodleImage.src = data[x].download_url
 
-        doodleImage.onerror = function() {
-          console.error('Error loading image:', doodleImage.src);
-          doodleImage.alt = 'Image not available';
-        };
-      
+
         newDoodle.appendChild(doodleImage);
 
       }
