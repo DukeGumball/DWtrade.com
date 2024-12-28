@@ -45,10 +45,19 @@ window.onload = function () {
         doodleImage = document.createElement("img")
         doodleImage.src = data[x].download_url
 
+        print(data[x].download_url)
 
+        // doodleImage.onerror = function() {
+        //   console.error('Error loading image:', doodleImage.src);
+        //   doodleImage.alt = 'Image not available';
+        // };
+      
         newDoodle.appendChild(doodleImage);
-
-      }
+    
+        // Log the path of the current item
+        console.log(`Path of item ${x}: ${data[x].path}`);
+    }
+    
 
       console.log(`Number of items in the folder "${folderPath}": ${numberOfItems}`);
 
