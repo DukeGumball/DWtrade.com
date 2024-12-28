@@ -45,7 +45,7 @@ window.onload = function () {
         doodleImage = document.createElement("img")
         doodleImage.src = data[x].download_url
 
-        print(data[x].download_url)
+        console.log(data[x].download_url)
 
         // doodleImage.onerror = function() {
         //   console.error('Error loading image:', doodleImage.src);
