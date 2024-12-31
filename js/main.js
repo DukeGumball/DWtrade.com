@@ -35,7 +35,7 @@ window.onload = function () {
   
             const doodleImage = document.createElement("img");
             doodleImage.src = item.download_url;
-  
+            doodleImage.id = "DoodleImage";
             doodleImage.onerror = function() {
               console.error('Error loading image:', doodleImage.src);
               doodleImage.alt = 'Image not available';
@@ -68,7 +68,7 @@ window.onload = function () {
 
   addDoodle.onclick = function () {
 
-    createUI.style.display = "Block"
+    createUI.style.display = "flex"
 
     displayItems()
 

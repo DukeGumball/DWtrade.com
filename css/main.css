@@ -166,6 +166,10 @@
   bottom: 0;
   right: 0;
 
+  justify-content: space-around; /* Adjust spacing between elements */
+  align-items: center; /* Center elements vertically */
+  flex-wrap: wrap; /* Allow elements to wrap to the next line if needed */
+
 }
 
 /* #DoodleCreate_Menu {
@@ -189,8 +193,10 @@
 } */
 
 #CreateTitle {
-  z-index: 6;
-  font-size: 30px;
+
+  display: inherit; 
+  z-index: 7;
+  font-size: calc(1vw + 1vh + 1vmin); 
   text-align: center;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
@@ -201,18 +207,25 @@
   margin-left: auto;
   margin-right: auto;
 
+  position: relative;
+  top: -40%;
+
 }
 
 #CreateTitle_Doodles {
 
   display: inherit;
   z-index: 6;
-  font-size: 30px;
+  font-size: calc(1vw + 1vh + 1vmin); 
   text-align: center;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
-  -webkit-text-stroke:1px rgb(255, 255, 255);
-  -webkit-text-fill-color:rgb(0, 0, 0);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+
 
 }
 
@@ -220,21 +233,20 @@
 
   display: inherit;
   z-index: 6;
-  width: 20vw;
   background: rgba(117, 118, 124, 0.7);
   border: 2.5px solid rgb(255, 255, 255);
   position: inherit;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   padding: 10px;
-  max-width: 200px;
+  height: calc(10vw + 5vh + 5vmin); /* Adjust the calculation as needed */
+  width: calc(10vw + 5vh + 5vmin);
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 
 }
 
 #DoodleSelection {
-  z-index: 6;
 
+  display: inherit; 
+  z-index: 6;
   position: inherit;
   display: inherit;
   height: 80%;
@@ -243,10 +255,13 @@
   border: 2.5px solid rgb(255, 255, 255);
   max-width: 500px;
 
+  left: 0;
+
 }
 
 #DoodleSelection_List {
 
+  display: inherit; 
   list-style-type: none;
   z-index: 6;
   padding: 5px;
@@ -260,6 +275,7 @@
 
 #Doodle_ListItem {
 
+  display: inherit; 
   display: inline-block;
   width: 50px;
   height: 50px;
