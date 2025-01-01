@@ -17,6 +17,7 @@ window.onload = function () {
   const announcementBar = document.getElementById("MessageBoard");
   const createUI = document.getElementById("DoodleCreate");
   const doodleList = document.getElementById("DoodleSelection_List");
+  const doodleIcon = document.getElementById("DoodleImage")
 
   async function displayItems() {
   
@@ -44,20 +45,20 @@ window.onload = function () {
             doodleImage.id = "DoodleImage";
 
             const doodleImageButton = document.createElement("button");
-            doodleImageButton.id = "DoodleImage";
+            doodleImageButton.id = "DoodleImageButton";
 
             doodleImageButton.onclick = function() {
-
-                 console.log("Clicked")
+              doodleIcon.src = item.download_url;
 
             }
             doodleImage.onerror = function() {
               console.error('Error loading image:', doodleImage.src);
               doodleImage.alt = 'Image not available';
             };
-  
+
+            newDoodle.appendChild(doodleImageButton);
             newDoodle.appendChild(doodleImage);
-  
+
           }
         });
       }

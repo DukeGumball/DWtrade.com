@@ -175,7 +175,18 @@
 #DoodleImage {
 
   display: block;
-  z-index: 50;
+  z-index: 30;
+
+  height: 100%;  
+  width: 100%;
+
+}
+
+#DoodleImageButton {
+
+  display: block;
+  background-color: rgb(255,255,255, 0);
+  z-index: 35;
 
   height: 100%;  
   width: 100%;
