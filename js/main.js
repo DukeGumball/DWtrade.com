@@ -56,8 +56,8 @@ window.onload = function () {
               doodleImage.alt = 'Image not available';
             };
 
-            newDoodle.appendChild(doodleImageButton);
             newDoodle.appendChild(doodleImage);
+            newDoodle.appendChild(doodleImageButton);
 
           }
         });
