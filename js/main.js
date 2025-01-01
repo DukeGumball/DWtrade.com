@@ -21,14 +21,20 @@ window.onload = function () {
   async function displayItems() {
   
     try {
+
       const response = await fetch(doodleURL);
       const data = await response.json();
   
       if (Array.isArray(data)) {
+
         const doodleList = document.getElementById('DoodleSelection_List');
 
         data.forEach((item, index) => {
+
           if (item.type === 'file' && item.download_url) {
+
+
+            doodleList.innerHTML = "";
             const newDoodle = document.createElement("li");
             newDoodle.id = "Doodle_ListItem"
             doodleList.appendChild(newDoodle);
@@ -36,6 +42,15 @@ window.onload = function () {
             const doodleImage = document.createElement("img");
             doodleImage.src = item.download_url;
             doodleImage.id = "DoodleImage";
+
+            const doodleImageButton = document.createElement("button");
+            doodleImageButton.id = "DoodleImage";
+
+            doodleImageButton.onclick = function() {
+
+                 console.log("Clicked")
+
+            }
             doodleImage.onerror = function() {
               console.error('Error loading image:', doodleImage.src);
               doodleImage.alt = 'Image not available';
@@ -43,13 +58,8 @@ window.onload = function () {
   
             newDoodle.appendChild(doodleImage);
   
-            console.log(`Path of item ${index}: ${item.path}`);
           }
         });
-  
-        console.log(`Number of items in the folder: ${data.length}`);
-      } else {
-        console.error('Error: Unexpected response format');
       }
     } catch (error) {
       console.error('Error fetching images from repo:', error);

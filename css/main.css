@@ -219,31 +219,11 @@
   bottom: 0;
   right: 0;
 
-  justify-content: space-around; /* Adjust spacing between elements */
-  align-items: center; /* Center elements vertically */
-  flex-wrap: wrap; /* Allow elements to wrap to the next line if needed */
+  justify-content: space-around; 
+  align-items: center; 
+  flex-wrap: wrap; 
 
 }
-
-/* #DoodleCreate_Menu {
-  z-index: 6;
-
-  display: inherit;
-  z-index: 5;
-
-  width: 95%;
-  height: inherit;
-  background: rgba(117, 118, 124, 0.7);
-  border: 5px solid rgb(255, 255, 255);
-  border-radius: 15px;
-  position: absolute;
-  margin: inherit;
-  top: inherit;
-  left: inherit;
-  bottom: inherit;
-  right: inherit;
-
-} */
 
 #CreateTitle {
 
@@ -262,7 +242,7 @@
   margin-right: auto;
 
   position: relative;
-  top: -40%;
+  top: -45%;
 
 }
 
@@ -270,19 +250,16 @@
 
   display: inherit;
   color: white;
-  z-index: 6;
-
-  font-size: calc(1vw + 1vh + 1vmin); 
+  z-index: 8;
+  font-size: calc(1vw + 1vh + 1vmin);
   text-align: center;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
   -webkit-text-fill-color: rgb(0, 0, 0);
-  
-  margin-left: auto;
-  margin-right: auto;
-
-
+  position: relative;
+  margin: 20px 0;
+ 
 }
 
 #DoodleIcon {
@@ -304,39 +281,39 @@
 }
 
 #DoodleSelection {
-
   display: block; 
   background: rgba(117, 118, 124, 0.7);
   z-index: 6;
-  overflow: scroll;
-  overflow-x: hidden;
 
-  height: 80%;
-  width: 30%;
-  max-width: 500px;
-  margin: -20px;
 
-  position: inherit;
+  height: 90%;
+  width: calc(30% - 20px); /* Adjust width to prevent overlap */
+  margin-left: 20px; /* Add margin to create space */
 
   border: 2.5px solid rgb(255, 255, 255);
 
+  position: absolute;
   left: 0;
-
 }
 
 #DoodleSelection_List {
+  overflow: auto;
   display: flex;
-  justify-content: center; /* Center items horizontally */
-  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
   z-index: 6;
-  height: 80%;
-  width: auto;
-  padding: 20px;
-  list-style-type: none;
+
+  justify-content: center; 
+  flex-wrap: wrap; 
+
   position: inherit;
+  overflow: auto; 
+  max-height: 80%; 
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
 }
 
 #Doodle_ListItem {
+
   display: block;
   background-color: #c9bdbd;
   overflow: hidden;
@@ -344,5 +321,6 @@
   height: 50px;
   border: 1px solid #ffffff;
   position: relative;
-  margin: 5px; /* Add some margin to space out the items */
+  margin: 5px;
+
 }
