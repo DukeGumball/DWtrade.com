@@ -13,7 +13,7 @@ const doodleURL = `https://api.github.com/repos/DukeGumball/DWtrade.com/contents
 
 window.onload = function () {
 
-  const addDoodle = document.getElementById("AddTrade");
+  const addDoodle = document.getElementById("AddDoodle_Button");
   const announcementBar = document.getElementById("MessageBoard");
   const createUI = document.getElementById("DoodleCreate");
   const doodleList = document.getElementById("DoodleSelection_List");

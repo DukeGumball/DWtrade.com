@@ -1,46 +1,20 @@
-/* Test */
+/* Background */
 
-#PG {
-  text-align: center;
-  text-transform: uppercase;
-  color: #4CAF50;
-  font-family: "Lucida Console", "Courier New", monospace;
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
 }
 
-#MenuBar {
-  list-style-type: none;
-  margin: -10px;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #ffffff;
-  background-color: #c9bdbd;
-  height: 45px;
+::-webkit-scrollbar-track {
+  background: rgb(255,255,255,0); /* Background of the scrollbar track */
 }
 
-#MenuBar_Item a {
-  display: block;
-  font-size:20px;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Lucida Console", "Courier New", monospace;
-  float: left;
-}
-#MenuBar_Item_S a{
-  display: block;
-  color: #000000;
-  float: right;
+::-webkit-scrollbar-thumb {
+  background: rgb(169, 164, 164);
+  border-radius: 6px; /* Rounded corners for the scrollbar thumb */
 }
 
-#MenuBar_Item a:hover:not(.active) {
-  background-color: #726c6c;
-}
-
-#MenuBar_Item a.active {
-  color: white;
-  background-color: #030203;
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb when hovered */
 }
 
 #CurrentBackground {
@@ -49,11 +23,22 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center; 
+
+  overflow-x: hidden;
+
 }
 
 #MessageBoard {
 
   display: none;
+  background-color: #ffffff;
+
+  width: 60%;
+  height: 50px;
+  padding: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
 
   font-weight: bold;
   text-align: center;
@@ -61,22 +46,75 @@
 
   border-radius: 15px;
   border: 5px solid rgb(0, 0, 0);
-  background-color: #ffffff;
-  width: 60%;
-  padding: 10px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #ff5454;
         
 }
 
+/* Menu Bar */
+
+#MenuBar {
+
+  display: block;
+  background-color: #c9bdbd;
+  overflow: hidden;
+
+  height: 45px;
+  padding: 0;
+  margin: -10px;
+
+  border: 1px solid #ffffff;
+  
+  list-style-type: none;
+}
+
+#MenuBar_Item a {
+
+  display: block;
+  color: #000000;
+
+  font-size:20px;
+  text-align: center;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Lucida Console", "Courier New", monospace;
+ 
+  padding: 14px 16px;
+  float: left;
+}
+
+#MenuBar_Item_S a{
+
+  display: block;
+  color: #000000;
+
+  float: right;
+
+}
+
+#MenuBar_Item a:hover:not(.active) {
+
+  background-color: #726c6c;
+
+}
+
+#MenuBar_Item a.active {
+
+  color: white;
+  background-color: #030203;
+
+}
+
+/* Doodle Space */
+
 #BoxTitle {
 
+  display: block;
+
+  font-size: 20px;
+  text-align: center;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
-  text-align: center;
-  font-size: 20px;
+
   margin-top: 5px;
 
 }
@@ -84,55 +122,70 @@
 #TradeBox {
 
   display: block;
+  background: rgba(89, 85, 150, 0.3);
 
   width: 80%;
   height: 500px;
-  background: rgba(89, 85, 150, 0.3);
-  border: 5px solid rgb(143, 120, 120);
+  padding: 10px;
+
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+
+  border: 5px solid rgb(143, 120, 120);
   border-radius: 15px;
-  text-anchor: middle;
+
 }
 
-#AddTrade {
+#AddDoodle_Button {
+  
+  display: block;
+  background-color: rgb(255, 255, 255);
+
+  text-align: center;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
-  text-align: center;
+
   padding: 10px;
 
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
   float: right;
+
+  border-radius: 15px;
+
 }
 
 #DoodleContent {
 
-  list-style-type: none;
-  overflow: hidden;
-  background: rgb(255,255,255, 0.5);
-  border-radius: 15px;
+  display: block;
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10px;
+  overflow: hidden;
+
+  list-style-type: none;
 
   height: 80%;
   width: 90%;
+  padding: 10px;
+
   margin-left: auto;
   margin-right: auto;
+
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 #DoodleImage {
+
   display: block;
+  z-index: 50;
+
   height: 100%;  
   width: 100%;
-  z-index: 50;
 
 }
 
 #ContentItem {
+  
   display: block;
+
   list-style-type: none;
   overflow: hidden;
   background: rgb(255,255,255, 0.5);
@@ -195,7 +248,9 @@
 #CreateTitle {
 
   display: inherit; 
+  color: white;
   z-index: 7;
+
   font-size: calc(1vw + 1vh + 1vmin); 
   text-align: center;
   font-weight: bold;
@@ -203,7 +258,6 @@
   -webkit-text-stroke:1px rgb(255, 255, 255);
   -webkit-text-fill-color:rgb(0, 0, 0);
 
-  color: white;
   margin-left: auto;
   margin-right: auto;
 
@@ -215,14 +269,16 @@
 #CreateTitle_Doodles {
 
   display: inherit;
+  color: white;
   z-index: 6;
+
   font-size: calc(1vw + 1vh + 1vmin); 
   text-align: center;
   font-weight: bold;
   font-family: "Lucida Console", "Courier New", monospace;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
   -webkit-text-fill-color: rgb(0, 0, 0);
-  color: white;
+  
   margin-left: auto;
   margin-right: auto;
 
@@ -232,55 +288,61 @@
 #DoodleIcon {
 
   display: inherit;
-  z-index: 6;
+  box-sizing: border-box; 
   background: rgba(117, 118, 124, 0.7);
-  border: 2.5px solid rgb(255, 255, 255);
-  position: inherit;
-  padding: 10px;
-  height: calc(10vw + 5vh + 5vmin); /* Adjust the calculation as needed */
+  z-index: 6;
+  
+  height: calc(10vw + 5vh + 5vmin); 
   width: calc(10vw + 5vh + 5vmin);
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px;
+
+  position: inherit;
+
+  border: 2.5px solid rgb(255, 255, 255);
+
 
 }
 
 #DoodleSelection {
 
-  display: inherit; 
+  display: block; 
+  background: rgba(117, 118, 124, 0.7);
   z-index: 6;
-  position: inherit;
-  display: inherit;
+  overflow: scroll;
+  overflow-x: hidden;
+
   height: 80%;
   width: 30%;
-  background: rgba(117, 118, 124, 0.7);
-  border: 2.5px solid rgb(255, 255, 255);
   max-width: 500px;
+  margin: -20px;
+
+  position: inherit;
+
+  border: 2.5px solid rgb(255, 255, 255);
 
   left: 0;
 
 }
 
 #DoodleSelection_List {
-
-  display: inherit; 
-  list-style-type: none;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
   z-index: 6;
-  padding: 5px;
-  position: inherit;
-  display: inherit;
   height: 80%;
-  width: 30%;
-  max-width: scroll;
-	width: auto;
+  width: auto;
+  padding: 20px;
+  list-style-type: none;
+  position: inherit;
 }
 
 #Doodle_ListItem {
-
-  display: inherit; 
-  display: inline-block;
+  display: block;
+  background-color: #c9bdbd;
+  overflow: hidden;
   width: 50px;
   height: 50px;
-  overflow: hidden;
   border: 1px solid #ffffff;
-  background-color: #c9bdbd;
-
+  position: relative;
+  margin: 5px; /* Add some margin to space out the items */
 }
