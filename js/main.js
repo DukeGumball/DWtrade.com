@@ -55,9 +55,10 @@ window.onload = function () {
               console.error('Error loading image:', doodleImage.src);
               doodleImage.alt = 'Image not available';
             };
+            
+            newDoodle.appendChild(doodleImageButton);
 
             newDoodle.appendChild(doodleImage);
-            newDoodle.appendChild(doodleImageButton);
 
           }
         });

@@ -185,6 +185,7 @@
 #DoodleImageButton {
 
   display: block;
+  position: absolute;
   background-color: transparent;
   z-index: 90;
 
