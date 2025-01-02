@@ -5,7 +5,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(255,255,255,0); /* Background of the scrollbar track */
+  background: rgb(255,255,255,0); 
 }
 
 ::-webkit-scrollbar-thumb {
@@ -25,6 +25,24 @@
   background-position: center; 
 
   overflow-x: hidden;
+
+}
+
+#DoodleIcon {
+
+  display: inherit;
+  box-sizing: border-box; 
+  background: rgba(117, 118, 124, 0.7);
+  z-index: 6;
+  
+  height: calc(10vw + 5vh + 5vmin); 
+  width: calc(10vw + 5vh + 5vmin);
+  padding: 10px;
+
+  position: inherit;
+
+  border: 2.5px solid rgb(255, 255, 255);
+
 
 }
 
@@ -237,6 +255,27 @@
 
 }
 
+#DoodleName {
+
+  display: inherit; 
+  color: white;
+  z-index: 7;
+
+  font-size: calc(1vw + 1vh + 1vmin); 
+  text-align: center;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  -webkit-text-stroke:1px rgb(255, 255, 255);
+  -webkit-text-fill-color:rgb(0, 0, 0);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: absolute;
+  top: 145px;
+
+}
+
 #CreateTitle {
 
   display: inherit; 
@@ -253,8 +292,9 @@
   margin-left: auto;
   margin-right: auto;
 
-  position: relative;
-  top: -45%;
+  position: absolute;
+
+  top: 0;
 
 }
 
@@ -274,24 +314,6 @@
  
 }
 
-#DoodleIcon {
-
-  display: inherit;
-  box-sizing: border-box; 
-  background: rgba(117, 118, 124, 0.7);
-  z-index: 6;
-  
-  height: calc(10vw + 5vh + 5vmin); 
-  width: calc(10vw + 5vh + 5vmin);
-  padding: 10px;
-
-  position: inherit;
-
-  border: 2.5px solid rgb(255, 255, 255);
-
-
-}
-
 #DoodleSelection {
   display: block; 
   background: rgba(117, 118, 124, 0.7);
@@ -300,12 +322,13 @@
 
   height: 90%;
   width: calc(30% - 20px); /* Adjust width to prevent overlap */
-  margin-left: 20px; /* Add margin to create space */
 
   border: 2.5px solid rgb(255, 255, 255);
 
   position: absolute;
   left: 0;
+
+  bottom: 25px
 }
 
 #DoodleSelection_List {
@@ -334,5 +357,100 @@
   border: 1px solid #ffffff;
   position: relative;
   margin: 5px;
+
+}
+
+/* Evolution Menu */
+
+#EvolutionSelection {
+
+  display: block; 
+  background: rgba(117, 118, 124, 0.7);
+  z-index: 6;
+
+
+  height: 20%;
+  width: calc(40%); /* Adjust width to prevent overlap */
+  padding: 10px;
+
+  border: 2.5px solid rgb(255, 255, 255);
+
+  position: absolute;
+  bottom: 25px;
+
+
+  list-style-type: none;
+
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#CreateTitle_Evolutions {
+
+  display: inherit;
+  color: white;
+  z-index: 8;
+  font-size: calc(.75vw + .75vh + .75vmin);
+  text-align: center;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  position: relative;
+
+}
+
+/* Auras/Skins */
+
+#DecorSelection {
+  display: block; 
+  background: rgba(117, 118, 124, 0.7);
+  z-index: 6;
+
+
+  height: 50%;
+  width: calc(30% - 20px); 
+
+  border: 2.5px solid rgb(255, 255, 255);
+
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+}
+
+#AuraButton, #SkinsButton {
+  display: inherit;
+  position: absolute;
+  background: rgba(117, 118, 124, 0.7);
+
+  width: 48%; 
+  height: 10%; 
+  border: 2.5px solid rgb(255, 255, 255);
+  top: -28px;
+  font-size: calc(.9vw + .9vh);
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  -webkit-text-stroke:1px rgb(255, 255, 255);
+  -webkit-text-fill-color:rgb(0, 0, 0);
+  
+  color: rgb(0, 0, 0); 
+  padding: 5px 0; 
+
+
+
+}
+
+#AuraButton {
+
+  right: 0;
+
+
+}
+
+#SkinsButton {
+
+  left: 0;
 
 }

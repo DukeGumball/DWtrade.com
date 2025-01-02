@@ -19,6 +19,8 @@ window.onload = function () {
   const doodleList = document.getElementById("DoodleSelection_List");
   const doodleIcon = document.getElementById("DoodleImage")
 
+  const doodleName = document.getElementById("DoodleName")
+
   async function displayItems() {
   
     try {
@@ -49,13 +51,14 @@ window.onload = function () {
 
             doodleImageButton.onclick = function() {
               doodleIcon.src = item.download_url;
+              doodleName.innerText = item.name;
 
             }
             doodleImage.onerror = function() {
               console.error('Error loading image:', doodleImage.src);
               doodleImage.alt = 'Image not available';
             };
-            
+
             newDoodle.appendChild(doodleImageButton);
 
             newDoodle.appendChild(doodleImage);
