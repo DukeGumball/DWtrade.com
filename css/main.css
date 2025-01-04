@@ -420,7 +420,7 @@
   bottom: 25px;
 }
 
-#AuraButton, #SkinsButton {
+#TintsButton, #SkinsButton {
   display: inherit;
   position: absolute;
   background: rgba(117, 118, 124, 0.7);
@@ -442,7 +442,7 @@
 
 }
 
-#AuraButton {
+#TintsButton {
 
   right: 0;
 

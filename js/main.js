@@ -11,6 +11,8 @@ const folderPath = "Doodles";
 
 const doodleURL = `https://api.github.com/repos/DukeGumball/DWtrade.com/contents/Doodles`;
 
+const doodlepedia = 'https://doodle-world.fandom.com/wiki/Doodlepedia'
+
 window.onload = function () {
 
   const addDoodle = document.getElementById("AddDoodle_Button");
@@ -71,6 +73,20 @@ window.onload = function () {
     }
   }
   
+  async function getDoodles() {
+
+    try {
+
+      const response = await fetch(doodleURL);
+      const data = await response.json();
+
+      console.log(data)
+
+    } catch (error) {
+      console.error('Error fetching images from repo:', error);
+    }
+
+  }
 
   if (enableAnnouncement == true) {
 
