@@ -77,7 +77,7 @@ window.onload = function () {
 
     try {
 
-      const response = await fetch(doodleURL);
+      const response = await fetch(doodlepedia);
       const data = await response.json();
 
       console.log(data)
