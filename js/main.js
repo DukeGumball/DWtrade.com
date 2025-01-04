@@ -88,6 +88,8 @@ window.onload = function () {
 
   }
 
+  getDoodles()
+
   if (enableAnnouncement == true) {
 
     announcementBar.style.display = "Block"
